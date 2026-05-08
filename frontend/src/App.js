@@ -2,6 +2,7 @@ import "@/App.css";
 import { ThemeProvider } from "./components/ThemeProvider";
 import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
+import Showcase from "./components/Showcase";
 import Values from "./components/Values";
 import Work from "./components/Work";
 import Testimonials from "./components/Testimonials";
@@ -16,6 +17,7 @@ function App() {
         <Navigation />
         <main>
           <Hero />
+          <Showcase />
           <Work />
           <Values />
           <Testimonials />

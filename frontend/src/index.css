@@ -108,6 +108,15 @@ html {
     100% { transform: translateX(-50%); }
   }
 
+  @keyframes marqueeY {
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+  }
+  @keyframes marqueeY-rev {
+    0%   { transform: translateY(-50%); }
+    100% { transform: translateY(0); }
+  }
+
   .text-balance { text-wrap: balance; }
 
   /* Subtle hover underline effect */
