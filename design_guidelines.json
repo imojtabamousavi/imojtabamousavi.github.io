@@ -1,0 +1,97 @@
+{
+  "theme": "dark_default_light_togglable",
+  "archetype": "Archetype 4: Swiss & High-Contrast",
+  "domain": "Portfolio / Personal Brand",
+  "color_palette": {
+    "dark": {
+      "background": "#0a0a0a",
+      "surface": "#141414",
+      "text_primary": "#ffffff",
+      "text_secondary": "#a1a1aa",
+      "accent": "#ffffff",
+      "border": "#27272a"
+    },
+    "light": {
+      "background": "#fdfdfd",
+      "surface": "#f4f4f5",
+      "text_primary": "#000000",
+      "text_secondary": "#52525b",
+      "accent": "#000000",
+      "border": "#e4e4e7"
+    }
+  },
+  "typography": {
+    "heading_font": "Outfit, sans-serif",
+    "body_font": "Inter, sans-serif",
+    "rules": {
+      "h1": "text-5xl sm:text-6xl tracking-tighter leading-none font-bold",
+      "h2": "text-4xl sm:text-5xl tracking-tight leading-tight font-bold",
+      "h3": "text-2xl sm:text-3xl tracking-tight font-semibold",
+      "body": "text-base sm:text-lg leading-relaxed",
+      "labels": "uppercase text-xs tracking-[0.2em] font-medium"
+    }
+  },
+  "layout_and_spacing": {
+    "philosophy": "Asymmetric, editorial, generous negative space, left-aligned focus",
+    "section_padding": "py-24 md:py-32",
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "grid": "Use grid-cols-1 md:grid-cols-12 with asymmetric spanning (e.g. col-span-5 vs col-span-7) to avoid boxy symmetry."
+  },
+  "motion_and_interactions": {
+    "scroll_reveal": "Framer motion fade-up and blur-in on scroll triggers. Staggered reveals for lists.",
+    "hover_effects": "Subtle -translate-y-1, image zoom inside container (scale-105) for collage, text opacity shifts for links.",
+    "smooth_scroll": "Lenis for premium momentum scrolling feeling."
+  },
+  "components": {
+    "navigation": "Sticky top navigation, backdrop-blur-xl (crystal glass), z-50. Include logo/name, links: Intro, Work, Values, Background, References, Contact. Add theme toggle (sun/moon) and 'Download Resume' button.",
+    "hero": "Editorial split layout. Left: Massive typographic statement, left-aligned. Right: Image collage of past work (overlapping absolute positioned images with subtle shadows).",
+    "values": "Large statement display. Text heavily contrasting background. E.g., 'Useful, Considered, Beautiful, Well-made.'",
+    "work_history": "Detailed timeline list. Left column (md:col-span-3) for dates, Right column (md:col-span-9) for Company, Role, Location, and Description. Generous spacing between items.",
+    "testimonials": "Asymmetric grid layout, large quotation marks, serif font for the quote itself to add contrast (optional), attribution below.",
+    "accolades": "Minimalist list/table, border-b on items, hover state adds subtle background tint.",
+    "contact": "Massive typography for email CTA (e.g., text-5xl+), LinkedIn link, accompanied by the professional headshot image."
+  },
+  "image_urls": [
+    {
+      "category": "hero_collage_1",
+      "url": "https://static.prod-images.emergentagent.com/jobs/dcf36b8e-5930-47f3-b98f-7f0fffa68a27/images/a91bdd2243f582536146028511c301c45d45233877cd616baa49c91e7a2216a6.png",
+      "description": "Main dark dashboard UI design mockup"
+    },
+    {
+      "category": "hero_collage_2",
+      "url": "https://images.unsplash.com/photo-1776702683574-f91f73a3cd26?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHwxfHxkYXNoYm9hcmQlMjBkZXNpZ24lMjBkYXJrJTIwbW9kZSUyMFVJfGVufDB8fHx8MTc3ODIyNTg4Mnww&ixlib=rb-4.1.0&q=85",
+      "description": "Mobile app UI in darkness"
+    },
+    {
+      "category": "hero_collage_3",
+      "url": "https://images.unsplash.com/photo-1760597371674-c5a412f2ae01?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxtaW5pbWFsaXN0JTIwbW9iaWxlJTIwYXBwJTIwVUklMjBkZXNpZ258ZW58MHx8fHwxNzc4MjI1ODgyfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Minimalist mobile app grid"
+    },
+    {
+      "category": "headshot",
+      "url": "https://images.pexels.com/photos/11781697/pexels-photo-11781697.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Professional bearded man portrait"
+    }
+  ],
+  "content_structure": {
+    "name": "Mojtaba Mousavi",
+    "title": "Senior Product Designer",
+    "location": "Rasht, Iran",
+    "experience": "7+ years",
+    "companies": ["WhiteFox", "Nito Labs", "LeQuest", "Lumenswap", "Hamyar System", "Yekzan", "Ponisha"],
+    "skills": ["Figma", "Sketch", "Design Systems", "Prototyping", "User Research"]
+  },
+  "instructions_to_main_agent": [
+    "Install and setup Lucide React or Phosphor Icons for iconography.",
+    "Install lenis (@studio-freight/lenis) for smooth scrolling.",
+    "Install framer-motion for page transitions and scroll reveals.",
+    "Install next-themes (or equivalent) for robust light/dark mode toggling.",
+    "Import Outfit font via Google Fonts (or similar) for all headings, keep Inter for body.",
+    "Do NOT use space grotesk for fonts.",
+    "Do NOT use teal or purple gradients.",
+    "Build Shadcn components (Button, Sheet, etc.) avoiding the generic default look. Ensure 'Download Resume' CTA is prominent.",
+    "Ensure the hero section mimics an editorial layout: giant typography on one side, stacked overlapping images on the other.",
+    "Add 'data-testid' to all interactive elements.",
+    "Ensure high contrast ratios (text over background) in both themes."
+  ]
+}
