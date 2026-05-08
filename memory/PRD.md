@@ -40,3 +40,10 @@ Create a personal landing page for a UI/UX designer using Mojtaba Mousavi's resu
 - P2: Add Lenis smooth scrolling for premium scroll feel
 - P3: Add per-section scroll progress indicator
 - P3: Add subtle cursor-follow on hero image collage
+
+## Iteration 2 — 2026-12 (Showcase added)
+- New Showcase section (Hero → Showcase → Work) inspired by Billy Sweeney's project mosaic
+- 4 vertical marquee columns with curated UI/UX visuals, each scrolling at its own rhythm (some up, some down)
+- Soft top/bottom mask fade, hover-revealed project captions, CTA "Request the full case studies" → Contact
+- Nav updated with new Showcase anchor (desktop + mobile)
+- iteration_2 testing: 100% pass (13/13), 0 console errors
