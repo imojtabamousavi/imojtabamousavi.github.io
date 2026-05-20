@@ -62,13 +62,18 @@ export default function Navigation() {
             onClick={handleToggle}
             data-testid="theme-toggle-button"
             aria-label="Toggle theme"
-            className="h-9 w-9 grid place-items-center rounded-full border border-border hover:bg-accent transition-colors"
+            className="relative h-9 w-9 grid place-items-center overflow-hidden rounded-full border border-border hover:bg-accent transition-colors"
           >
-            {mounted && isDark ? (
-              <Sun className="h-4 w-4" />
-            ) : (
-              <Moon className="h-4 w-4" />
-            )}
+            <Sun
+              className={`absolute h-4 w-4 transition-all duration-300 ${
+                mounted && isDark ? "opacity-100 rotate-0 scale-100" : "opacity-0 -rotate-90 scale-75"
+              }`}
+            />
+            <Moon
+              className={`absolute h-4 w-4 transition-all duration-300 ${
+                mounted && isDark ? "opacity-0 rotate-90 scale-75" : "opacity-100 rotate-0 scale-100"
+              }`}
+            />
           </button>
 
           <Button
