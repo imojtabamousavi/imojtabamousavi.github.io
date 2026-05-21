@@ -1,33 +1,33 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
-// Curated UI/UX/Product visuals — split into 4 columns, each scrolls at its own rhythm.
+// Recent Dribbble shots split into 4 columns, each scrolls at its own rhythm.
 const col1 = [
-  { src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=720&q=70", caption: "Analytics · Lumenswap" },
-  { src: "https://images.unsplash.com/photo-1611078489935-0cb964de46d6?auto=format&fit=crop&w=720&q=70", caption: "iOS Wallet · Nito Labs" },
-  { src: "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=720&q=70", caption: "Mobile · Yekzan" },
-  { src: "https://images.unsplash.com/photo-1572177812156-58036aae439c?auto=format&fit=crop&w=720&q=70", caption: "Wireframes · LeQuest" },
+  { src: "https://cdn.dribbble.com/userupload/14042218/file/original-5c93a19e7434b1b37fec686a9f53e446.png?resize=400x0", caption: "Nito Labs website" },
+  { src: "https://cdn.dribbble.com/userupload/31863578/file/original-5c715c9219f081e06ee5ae74abfc6fe7.png?resize=400x0", caption: "Crypto Donate App" },
+  { src: "https://cdn.dribbble.com/userupload/30419959/file/original-9d2dfef01654907dab7eb821c10eba2d.png?resize=400x0", caption: "Sports Shop" },
+  { src: "https://cdn.dribbble.com/userupload/26877910/file/original-5106ddc7e3f254e87437446f98f456a2.png?resize=400x0", caption: "O'teacher Landingpage" },
 ];
 
 const col2 = [
-  { src: "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=720&q=70", caption: "Dashboard · WhiteFox" },
-  { src: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=720&q=70", caption: "Component Library" },
-  { src: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=720&q=70", caption: "Workshop · Hamyar" },
-  { src: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=720&q=70", caption: "Design Reviews" },
+  { src: "https://cdn.dribbble.com/userupload/36399448/file/original-0b7060ccbc390f06667d6ad50f83dc88.png?resize=400x0", caption: "Coworking space reservation app" },
+  { src: "https://cdn.dribbble.com/userupload/31693596/file/original-5fd2b5b5f8f7f2d965087ecff26ab23d.png?resize=400x0", caption: "Daofin Landing page" },
+  { src: "https://cdn.dribbble.com/userupload/30335896/file/original-e7ba251e2871fa0693f22964b4fce609.png?resize=400x0", caption: "Game Store" },
+  { src: "https://cdn.dribbble.com/userupload/26734332/file/original-be156084bca35b31a7c1154746c7d606.png?resize=400x0", caption: "Sports Shop" },
 ];
 
 const col3 = [
-  { src: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=720&q=70", caption: "iOS · Ponisha" },
-  { src: "https://images.unsplash.com/photo-1542744095-291d1f67b221?auto=format&fit=crop&w=720&q=70", caption: "Engineering Handoff" },
-  { src: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=720&q=70", caption: "Brand · Hamyar" },
-  { src: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=720&q=70", caption: "Marketing Site" },
+  { src: "https://cdn.dribbble.com/userupload/35945426/file/original-690ca90485ef11d767d09b3eeef19da3.png?resize=400x0", caption: "Coworking space reservation app" },
+  { src: "https://cdn.dribbble.com/userupload/30766732/file/original-1e96e68edb3d466611d33ebd2b295988.png?resize=400x0", caption: "Flowia Studio" },
+  { src: "https://cdn.dribbble.com/userupload/30248274/file/original-26114027bcd0ff7a305bf4cac823e92f.png?resize=400x0", caption: "My Cowork Space app concept" },
+  { src: "https://cdn.dribbble.com/userupload/26310762/file/original-d1fffe23ea625926af52c459a18c4613.png?resize=400x0", caption: "Sketch Hero" },
 ];
 
 const col4 = [
-  { src: "https://static.prod-images.emergentagent.com/jobs/dcf36b8e-5930-47f3-b98f-7f0fffa68a27/images/a91bdd2243f582536146028511c301c45d45233877cd616baa49c91e7a2216a6.png", caption: "Pool Liquidity · Lumenswap" },
-  { src: "https://images.unsplash.com/photo-1776702683574-f91f73a3cd26?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHwxfHxkYXNoYm9hcmQlMjBkZXNpZ24lMjBkYXJrJTIwbW9kZSUyMFVJfGVufDB8fHx8MTc3ODIyNTg4Mnww&ixlib=rb-4.1.0&q=85", caption: "Dark Mode · Wallet" },
-  { src: "https://images.unsplash.com/photo-1760597371674-c5a412f2ae01?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxtaW5pbWFsaXN0JTIwbW9iaWxlJTIwYXBwJTIwVUklMjBkZXNpZ258ZW58MHx8fHwxNzc4MjI1ODgyfDA&ixlib=rb-4.1.0&q=85", caption: "Onboarding Flows" },
-  { src: "https://images.unsplash.com/photo-1481487196290-c152efe083f5?auto=format&fit=crop&w=720&q=70", caption: "Trade · Lumenswap" },
+  { src: "https://cdn.dribbble.com/userupload/34623727/file/original-be2cad6759f9849dd9f76099988e1c41.png?resize=400x0", caption: "NFT Collection Landing page" },
+  { src: "https://cdn.dribbble.com/userupload/30601272/file/original-95fb89488b59e389ad465299fd54ca1c.png?resize=400x0", caption: "Sketch Hero" },
+  { src: "https://cdn.dribbble.com/userupload/27285135/file/original-b4f3e5d307e8c9b75e452ea83523fe6f.png?resize=400x0", caption: "Soft Galaxy Concept" },
+  { src: "https://cdn.dribbble.com/userupload/26236884/file/original-092c7f1fb360fb8070ffc08f47796b4f.png?resize=400x0", caption: "Decorative shop app" },
 ];
 
 function Column({ items, duration, reverse = false, testId }) {

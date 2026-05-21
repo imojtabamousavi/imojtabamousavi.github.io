@@ -1,6 +1,16 @@
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
-import { testimonials } from "../data/portfolio";
+import { testimonials } from "@/data/portfolio";
+
+const MAX_QUOTE_LENGTH = 262;
+
+function formatQuote(quote) {
+  if (quote.length <= MAX_QUOTE_LENGTH) {
+    return quote;
+  }
+
+  return `${quote.slice(0, MAX_QUOTE_LENGTH - 3).trimEnd()}...`;
+}
 
 export default function Testimonials() {
   return (
@@ -46,7 +56,7 @@ export default function Testimonials() {
             >
               <Quote className="h-6 w-6 text-muted-foreground/40 mb-4" />
               <blockquote className="font-serif-display text-2xl md:text-3xl leading-snug tracking-tight">
-                "{t.quote}"
+                "{formatQuote(t.quote)}"
               </blockquote>
               <figcaption className="mt-6 flex items-center gap-3">
                 <div className="h-8 w-8 rounded-full bg-foreground/10 grid place-items-center font-heading text-xs font-semibold">

@@ -2,9 +2,9 @@
 export const profile = {
   name: "Mojtaba Mousavi",
   title: "Senior Product Designer",
-  location: "Rasht, Iran",
+  location: "Yerevan, Armenia",
   email: "Mojtaba.mousavi.k@gmail.com",
-  phone: "+98 930 178 9263",
+  behance: "https://www.behance.net/mojtabamousavi",
   experience: "7+ years",
   headline:
     "Hello there, I'm a designer who cares about making beautiful things that help people.",
@@ -111,27 +111,27 @@ export const work = [
 export const testimonials = [
   {
     quote:
-      "Mojtaba sees systems where most see screens. He gave our product a backbone — a design language that scaled from MVP to enterprise without ever feeling stitched together.",
-    author: "Product Lead",
-    role: "WhiteFox",
+      "Mojtaba is very talented product designer. He has a good understanding of UI/UX and brings his own ideas. We worked together on Mycoworkcafé project and he redesigned our coworker app. I really enjoyed our collaboration and it was very pleasant to work with him.",
+    author: "Ali P.",
+    role: "CTO, amitego AG",
   },
   {
     quote:
-      "He treats edge cases the way most designers treat hero shots. The amount of care that goes into the parts no one is supposed to notice is what made our app feel premium.",
-    author: "Engineering Manager",
-    role: "Nito Labs",
+      "Mojtaba worked on our MASKS BY JORDI MOLLA project very professionally, even though it was a simple landing page, he created a well-structured design system where everything was sorted and very clean, every component in the Figma file was all set which made our further activities much smoother! I really enjoyed how easy it was to deliver him the ideas and receive the designs, the experience for me was seamless, I'm looking forward to working with Mojtaba again!",
+    author: "Shahab Papoon",
+    role: "Fractional Product Lead, Creator Genius",
   },
   {
     quote:
-      "Working with Mojtaba is like working with a partner, not a service. He pushes back, asks the right questions, and quietly makes everyone around him a better thinker.",
-    author: "CTO",
-    role: "Lumenswap",
+      "Mojtaba is a great Product designer to collaborate with. We were working together on \"Yekzan\" product since 2017. He showed a high level of UI design, time management, User researcher, technical skills and was a valuable contributor to our product. I absolutely would recommend him as good team player.",
+    author: "Mehran Asghari",
+    role: "Founder, Yekzan",
   },
   {
     quote:
-      "The handover documents alone changed how our engineers thought about quality. Tokens, states, motion — nothing was left up for interpretation.",
-    author: "Frontend Lead",
-    role: "LeQuest",
+      "I've been working with Mojtaba for more than one year in our company. From the very beginning, Mojtaba showed his dedication and contributed to the working processes of our company with great interest and energy. His solid, consistent and open-minded approach to new information in conjunction with strong problem-solving skills immediately has made him a very important part of our team. I see Mojtaba as a result-driven, highly motivated and perspective specialist who is eager for complex industry challenges and new knowledge.",
+    author: "amirhossein zarrinfard",
+    role: "Founder, Hamyarsystem",
   },
 ];
 

@@ -1,6 +1,19 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Mail, MapPin, Phone, Linkedin } from "lucide-react";
+import { ArrowUpRight, Mail, MapPin, Linkedin } from "lucide-react";
 import { profile, headshot } from "@/data/portfolio";
+
+function BehanceIcon(props) {
+  return (
+    <svg
+      aria-hidden="true"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path d="M21.04 7.78h-5.19V6.24h5.19v1.54ZM7.1 11.4c1.24 0 2.01-.53 2.01-1.68 0-1.26-.95-1.61-2.01-1.61H3.67v3.29H7.1Zm.2 4.54c1.34 0 2.23-.48 2.23-1.89 0-1.38-1.01-1.86-2.23-1.86H3.67v3.75H7.3ZM0 5.2h7.56c2.73 0 4.58.88 4.58 3.71 0 1.42-.69 2.43-1.97 3.03 1.77.5 2.66 1.86 2.66 3.67 0 2.94-2.5 4.2-5.12 4.2H0V5.2Zm18.64 12.68c1.46 0 2.1-.73 2.27-1.4h2.7c-.86 2.63-2.7 3.74-5.07 3.74-3.41 0-5.53-2.35-5.53-5.69 0-3.23 2.24-5.72 5.53-5.72 3.69 0 5.47 3.1 5.26 6.45h-7.86c.08 1.88 1 2.62 2.7 2.62Zm2.34-4.5c-.27-1.5-.92-2.29-2.53-2.29-2.02 0-2.6 1.57-2.64 2.29h5.17Z" />
+    </svg>
+  );
+}
 
 export default function Contact() {
   return (
@@ -68,14 +81,16 @@ export default function Contact() {
               </div>
               <div>
                 <div className="flex items-center gap-2 label-mono text-muted-foreground mb-2">
-                  <Phone className="h-3 w-3" /> Phone
+                  <BehanceIcon className="h-3 w-3" /> Behance
                 </div>
                 <a
-                  href={`tel:${profile.phone.replace(/\s+/g, "")}`}
-                  data-testid="contact-phone"
+                  href={profile.behance}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="contact-behance"
                   className="text-sm font-medium link-underline"
                 >
-                  {profile.phone}
+                  View case studies
                 </a>
               </div>
               <div>
