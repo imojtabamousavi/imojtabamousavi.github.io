@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { work } from "../data/portfolio";
+import { work } from "@/data/portfolio";
 
 export default function Work() {
   return (
@@ -22,8 +22,8 @@ export default function Work() {
           </div>
           <div className="lg:col-span-7 lg:pl-8 flex items-end">
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl">
-              Selected roles across fintech, healthcare and ed-tech — agencies,
-              startups and platforms. The work is varied, the philosophy is the
+              Selected roles across fintech, healthcare, ed-tech, agencies and
+              startups. The work is varied, the philosophy is the
               same: solve the right problem, then sweat the details.
             </p>
           </div>

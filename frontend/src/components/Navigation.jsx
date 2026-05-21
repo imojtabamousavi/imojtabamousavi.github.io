@@ -82,7 +82,7 @@ export default function Navigation() {
             data-testid="download-resume-button"
             className="hidden sm:inline-flex rounded-full font-medium"
           >
-            <a href="/resume.pdf" download="Mojtaba-Mousavi-Resume.pdf">
+            <a href="/MojtabaMousavi-Productdesigner.pdf" download="Mojtaba-Mousavi-Resume.pdf">
               <ArrowDownToLine className="h-4 w-4 mr-1.5" />
               Resume
             </a>
@@ -117,7 +117,7 @@ export default function Navigation() {
               </a>
             ))}
             <a
-              href="/resume.pdf"
+              href="/MojtabaMousavi-Productdesigner.pdf"
               download="Mojtaba-Mousavi-Resume.pdf"
               data-testid="mobile-download-resume"
               className="mt-2 inline-flex items-center gap-2 text-sm font-medium"

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, MapPin } from "lucide-react";
-import { profile, heroImages, skills } from "../data/portfolio";
+import { profile, heroImages, skills } from "@/data/portfolio";
 
 export default function Hero() {
   return (
@@ -15,11 +15,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="flex flex-wrap items-center gap-x-6 gap-y-2 label-mono text-muted-foreground mb-10"
+          className="flex flex-wrap items-center gap-x-6 gap-y-2 label-mono text-muted-foreground mb-2"
         >
           <span className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-            Available for select projects · 2026
+            Focused on current work · 2026
           </span>
           <span className="hidden sm:flex items-center gap-1.5">
             <MapPin className="h-3 w-3" />
@@ -35,7 +35,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
               data-testid="hero-headline"
-              className="font-heading font-medium tracking-[-0.04em] leading-[0.95] text-balance text-[3rem] sm:text-[4.2rem] md:text-[5.1rem] lg:text-[5.6rem]"
+              className="font-heading font-medium tracking-[-0.04em] leading-[0.95] text-balance text-[3rem] sm:text-[4.2rem] md:text-[5.1rem] lg:text-[5.5rem]"
             >
               Hello there, I'm a
               <br />
@@ -49,7 +49,7 @@ export default function Hero() {
               </span>
               {" "}feel
               <br />
-              beautiful....
+              beautiful..
             </motion.h1>
 
             <motion.p
@@ -69,11 +69,12 @@ export default function Hero() {
               className="mt-10 flex flex-wrap items-center gap-3"
             >
               <a
-                href="#work"
+                href={profile.behance}
+                target="_blank"
                 data-testid="hero-cta-work"
                 className="group inline-flex items-center gap-2 rounded-full bg-foreground text-background px-6 py-3 text-sm font-medium hover:opacity-90 transition-opacity"
               >
-                View selected work
+                View case studies
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
               <a

@@ -57,7 +57,7 @@ export const work = [
     company: "Nito Labs",
     role: "Senior Product Designer",
     dates: "Aug 2023 — Sep 2024",
-    location: "Remote",
+    location: "Turkey . Remote",
     description:
       "Web3-native fintech building crypto products. Owned the design of a native iOS crypto wallet with swap, invest and collateral features from scratch, and built a scalable design system on Apple's HIG that boosted development speed by 40%. Led UX improvements with a cross-functional team.",
   },
@@ -66,7 +66,7 @@ export const work = [
     company: "LeQuest",
     role: "Product Designer",
     dates: "Feb 2023 — Jul 2023",
-    location: "Rotterdam, Netherlands",
+    location: "Netherlands . On-site",
     description:
       "B2B e-learning platform for medical-device simulation training. Maintained, expanded and documented a Material UI–based design system with 360+ components. Owned end-to-end design — research, interviews, wireframes, prototypes — and lifted product consistency by 50% by scaling the responsive web design system.",
   },
@@ -75,7 +75,7 @@ export const work = [
     company: "Lumenswap",
     role: "Product Designer",
     dates: "Oct 2021 — Feb 2023",
-    location: "Remote · Fintech",
+    location: "Turkey . Remote",
     description:
       "B2C decentralized trading platform with 38K+ users. Built a design system from scratch (100+ components) and shipped the swap & trade experience that processes 5,200+ transactions per day. Designed the pool-liquidity feature that reached $20.64M TVL in its first 4 months. Implemented analytics-driven iterations that lifted user satisfaction by 34%.",
   },
@@ -84,7 +84,7 @@ export const work = [
     company: "Hamyar System",
     role: "Senior Product Designer",
     dates: "Feb 2020 — Sep 2021",
-    location: "Tehran",
+    location: "Tehran . Hybrid",
     description:
       "Web-based digital agency in the health industry with 42+ customers. Worked with 15+ clients to translate requirements into responsive, friendly interfaces. Built a comprehensive B2B SaaS design system (CMS for health clinics) that scaled the product from an MVP with 2 customers to 40+. Grew the product design team from 1 to 3 and ran up to 8 simultaneous projects across time zones.",
   },
@@ -93,7 +93,7 @@ export const work = [
     company: "Yekzan",
     role: "Product Designer",
     dates: "Dec 2018 — Jan 2020",
-    location: "Tehran",
+    location: "Tehran . Remote",
     description:
       "Iran's top women's-health app — 800,000+ installs and 25K+ daily active users. Redesigned the Android app, driving 720K+ new installs and an 80% lift in engagement over 2 years. Designed an internal PWS for doctors that improved their response time by 60%. Owned research, personas, journeys and feature definition.",
   },
@@ -102,7 +102,7 @@ export const work = [
     company: "Ponisha",
     role: "Product Designer",
     dates: "Feb 2018 — Oct 2018",
-    location: "Rasht",
+    location: "Rasht . On-site",
     description:
       "Iran's leading freelancing platform with 390K+ active users. Owned end-to-end journey and design for iOS, Android and the main website. Simplified the employer–freelancer connection with an iOS chat experience that lifted response speed by 30%, and redesigned the dashboard for a 50% reduction in average task-completion time.",
   },

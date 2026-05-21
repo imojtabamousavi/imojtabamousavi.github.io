@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import {profile} from "@/data/portfolio";
 
 // Recent Dribbble shots split into 4 columns, each scrolls at its own rhythm.
 const col1 = [
@@ -40,7 +41,7 @@ function Column({ items, duration, reverse = false, testId }) {
       style={{ maskImage: "linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%)", WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%)" }}
     >
       <div
-        className="flex flex-col gap-5 will-change-transform"
+        className="flex flex-col gap-5 transform-gpu will-change-transform hover:[animation-play-state:paused]"
         style={{
           animation: `${reverse ? "marqueeY-rev" : "marqueeY"} ${duration}s linear infinite`,
         }}
@@ -48,16 +49,18 @@ function Column({ items, duration, reverse = false, testId }) {
         {loop.map((it, i) => (
           <figure
             key={i}
-            className="group relative rounded-xl overflow-hidden border border-border bg-muted/40 shadow-2xl"
+            className="group relative isolate rounded-xl overflow-hidden border border-border bg-muted/40 shadow-2xl"
           >
             <img
               src={it.src}
               alt={it.caption}
               loading="lazy"
-              className="w-full h-auto aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+              className="w-full h-auto aspect-[3/4] object-cover transform-gpu will-change-transform transition-transform duration-500 ease-out group-hover:scale-[1.035]"
             />
-            <figcaption className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/75 to-transparent translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-              <span className="text-white text-xs label-mono">{it.caption}</span>
+            <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 translate-y-3 bg-gradient-to-t from-black/80 via-black/45 to-transparent p-3 pt-12 opacity-0 transition-[opacity,transform] duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100">
+              <span className="block text-white text-xs label-mono translate-y-1 transition-transform duration-300 ease-out group-hover:translate-y-0">
+                {it.caption}
+              </span>
             </figcaption>
           </figure>
         ))}
@@ -84,7 +87,7 @@ export default function Showcase() {
           >
             <p className="label-mono text-muted-foreground mb-4">— Showcase</p>
             <h2 className="font-heading font-medium tracking-[-0.03em] leading-[0.95] text-5xl sm:text-6xl md:text-7xl">
-              Seven years of{" "}
+              Seven years of{" "} <br/>
               <span className="font-serif-display italic font-normal text-muted-foreground">
                 shipped
               </span>{" "}
@@ -100,14 +103,15 @@ export default function Showcase() {
           >
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-md">
               A glimpse at flows, dashboards and design-system surfaces from
-              Lumenswap, Nito Labs, WhiteFox, Yekzan and more. Hover for context.
+              Lumenswap, Nito Labs, WhiteFox, Yekzan and more.
             </p>
             <a
-              href="#contact"
+              href={profile.behance}
+              target="_blank"
               data-testid="showcase-cta"
-              className="group mt-6 inline-flex items-center gap-2 text-sm font-medium link-underline"
+              className="group mt-6 !inline-flex items-center gap-2 text-sm font-medium link-underline"
             >
-              Request the full case studies
+              Show case studies
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
           </motion.div>

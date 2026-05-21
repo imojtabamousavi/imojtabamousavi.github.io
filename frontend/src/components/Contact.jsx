@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Mail, MapPin, Linkedin } from "lucide-react";
+import { ArrowUpRight, MapPin, Linkedin } from "lucide-react";
 import { profile, headshot } from "@/data/portfolio";
 
 function BehanceIcon(props) {
@@ -132,14 +132,6 @@ export default function Contact() {
                 </p>
               </div>
             </div>
-            <a
-              href={`mailto:${profile.email}`}
-              data-testid="contact-card-cta"
-              className="mt-4 inline-flex items-center gap-2 text-sm font-medium link-underline"
-            >
-              <Mail className="h-4 w-4" />
-              Say hello — usually replies within 24 hours
-            </a>
           </motion.div>
         </div>
       </div>
