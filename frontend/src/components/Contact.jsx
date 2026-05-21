@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Mail, MapPin, Phone, Linkedin } from "lucide-react";
-import { profile, headshot } from "../data/portfolio";
+import { profile, headshot } from "@/data/portfolio";
 
 export default function Contact() {
   return (

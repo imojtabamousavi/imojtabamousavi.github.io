@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { Sun, Moon, ArrowDownToLine, Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
-import { navigation, profile } from "../data/portfolio";
+import { navigation, profile } from "@/data/portfolio";
 
 export default function Navigation() {
   const { theme, setTheme, resolvedTheme } = useTheme();
