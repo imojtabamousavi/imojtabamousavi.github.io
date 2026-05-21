@@ -20,7 +20,7 @@ export default function Contact() {
               transition={{ duration: 0.6 }}
               className="label-mono text-muted-foreground mb-6"
             >
-              06 — Contact
+              05 — Contact
             </motion.p>
 
             <motion.h2

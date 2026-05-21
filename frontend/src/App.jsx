@@ -6,7 +6,6 @@ import Showcase from "./components/Showcase";
 import Values from "./components/Values";
 import Work from "./components/Work";
 import Testimonials from "./components/Testimonials";
-import AccoladesPress from "./components/AccoladesPress";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -21,7 +20,6 @@ function App() {
           <Work />
           <Values />
           <Testimonials />
-          <AccoladesPress />
           <Contact />
         </main>
         <Footer />

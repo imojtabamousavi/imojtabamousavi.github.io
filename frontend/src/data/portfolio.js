@@ -163,7 +163,6 @@ export const navigation = [
   { id: "work", label: "Work" },
   { id: "values", label: "Values" },
   { id: "references", label: "References" },
-  { id: "press", label: "Press" },
   { id: "contact", label: "Contact" },
 ];
 
