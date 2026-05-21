@@ -25,7 +25,7 @@ export default function Values() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7 }}
-              className="font-heading font-bold tracking-[-0.03em] leading-[0.95] text-5xl sm:text-6xl md:text-7xl"
+              className="font-heading font-medium tracking-[-0.03em] leading-[0.95] text-5xl sm:text-6xl md:text-7xl"
             >
               Useful
               <br />

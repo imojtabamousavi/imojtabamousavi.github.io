@@ -83,7 +83,7 @@ export default function Showcase() {
             className="lg:col-span-7"
           >
             <p className="label-mono text-muted-foreground mb-4">— Showcase</p>
-            <h2 className="font-heading font-bold tracking-[-0.03em] leading-[0.95] text-5xl sm:text-6xl md:text-7xl">
+            <h2 className="font-heading font-medium tracking-[-0.03em] leading-[0.95] text-5xl sm:text-6xl md:text-7xl">
               Seven years of{" "}
               <span className="font-serif-display italic font-normal text-muted-foreground">
                 shipped

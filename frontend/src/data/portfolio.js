@@ -8,9 +8,8 @@ export const profile = {
   experience: "7+ years",
   headline:
     "Hello there, I'm a designer who cares about making beautiful things that help people.",
-  summary:
-    "Experienced product designer with over 7 years of expertise in fintech, healthcare and ed-tech. I specialize in crafting user-centric interfaces and scalable design systems that align with user needs and business value — using design as a tool to solve complex problems and create meaningful impact.",
-  audience: [
+  summary:"I create thoughtful products and scalable experiences where beauty and usability work together.",
+      audience: [
     "For anyone",
     "Recruiters",
     "Design Directors",
@@ -181,5 +180,4 @@ export const heroImages = [
   },
 ];
 
-export const headshot =
-  "https://images.pexels.com/photos/11781697/pexels-photo-11781697.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+export const headshot = "/profile.jpg";

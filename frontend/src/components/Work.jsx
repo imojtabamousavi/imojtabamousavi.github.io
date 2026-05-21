@@ -13,7 +13,7 @@ export default function Work() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
           <div className="lg:col-span-5">
             <p className="label-mono text-muted-foreground mb-4">01 — Work</p>
-            <h2 className="font-heading font-bold tracking-[-0.03em] leading-[0.95] text-5xl sm:text-6xl">
+            <h2 className="font-heading font-medium tracking-[-0.03em] leading-[0.95] text-5xl sm:text-6xl">
               A decade of
               <br />
               <span className="font-serif-display italic font-normal">careful</span>{" "}
@@ -58,7 +58,7 @@ export default function Work() {
                     {job.company}
                   </span>
                 </div>
-                <h3 className="font-heading font-bold tracking-tight text-3xl md:text-5xl leading-[1.05] mb-4 flex items-baseline gap-3">
+                <h3 className="font-heading font-medium tracking-tight text-3xl md:text-5xl leading-[1.05] mb-4 flex items-baseline gap-3">
                   {job.role}
                   <ArrowUpRight className="h-6 w-6 md:h-8 md:w-8 opacity-0 -translate-x-2 group-hover:opacity-60 group-hover:translate-x-0 transition-all duration-500" />
                 </h3>

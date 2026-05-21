@@ -15,7 +15,7 @@ export default function Testimonials() {
             <p className="label-mono text-muted-foreground mb-4">
               03 — References
             </p>
-            <h2 className="font-heading font-bold tracking-[-0.03em] leading-[0.95] text-5xl sm:text-6xl">
+            <h2 className="font-heading font-medium tracking-[-0.03em] leading-[0.95] text-5xl sm:text-6xl">
               In their{" "}
               <span className="font-serif-display italic font-normal">
                 own words

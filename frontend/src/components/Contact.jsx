@@ -29,7 +29,7 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               data-testid="contact-headline"
-              className="font-heading font-bold tracking-[-0.04em] leading-[0.92] text-5xl sm:text-6xl md:text-7xl lg:text-8xl"
+              className="font-heading font-medium tracking-[-0.04em] leading-[0.92] text-5xl sm:text-6xl md:text-7xl lg:text-8xl"
             >
               Have a problem
               <br />

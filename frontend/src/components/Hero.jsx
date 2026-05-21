@@ -15,7 +15,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="flex flex-wrap items-center gap-x-6 gap-y-2 label-mono text-muted-foreground mb-12"
+          className="flex flex-wrap items-center gap-x-6 gap-y-2 label-mono text-muted-foreground mb-10"
         >
           <span className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
@@ -35,17 +35,21 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
               data-testid="hero-headline"
-              className="font-heading font-bold tracking-[-0.04em] leading-[0.95] text-balance text-[3rem] sm:text-[4.2rem] md:text-[5.2rem] lg:text-[6rem]"
+              className="font-heading font-medium tracking-[-0.04em] leading-[0.95] text-balance text-[3rem] sm:text-[4.2rem] md:text-[5.1rem] lg:text-[5.6rem]"
             >
-              Hello there, I'm a{" "}
-              <span className="font-serif-display italic font-normal text-muted-foreground">
+              Hello there, I'm a
+              <br />
+              <span className="mr-0.5 font-serif-display italic font-normal text-muted-foreground">
                 designer
-              </span>{" "}
-              who cares about making{" "}
-              <span className="font-serif-display italic font-normal text-muted-foreground">
-                beautiful
-              </span>{" "}
-              things that help people.
+              </span>
+              {" "}making
+              <br />
+              <span className="mr-0.5 font-serif-display italic font-normal text-muted-foreground">
+                simple
+              </span>
+              {" "}feel
+              <br />
+              beautiful....
             </motion.h1>
 
             <motion.p
