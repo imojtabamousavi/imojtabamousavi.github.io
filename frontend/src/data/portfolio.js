@@ -114,24 +114,28 @@ export const testimonials = [
       "Mojtaba is very talented product designer. He has a good understanding of UI/UX and brings his own ideas. We worked together on Mycoworkcafé project and he redesigned our coworker app. I really enjoyed our collaboration and it was very pleasant to work with him.",
     author: "Ali P.",
     role: "CTO, amitego AG",
+    imgSrc: 'https://media.licdn.com/dms/image/v2/D4E03AQH6gVtPiRNc2A/profile-displayphoto-scale_100_100/B4EZzo4yOSJ0Ak-/0/1773433731642?e=1781136000&v=beta&t=MvKPS3ABSGDIhnEbpmmhFxXeax9rGYA1vn78Yw2ZbSY'
   },
   {
     quote:
       "Mojtaba worked on our MASKS BY JORDI MOLLA project very professionally, even though it was a simple landing page, he created a well-structured design system where everything was sorted and very clean, every component in the Figma file was all set which made our further activities much smoother! I really enjoyed how easy it was to deliver him the ideas and receive the designs, the experience for me was seamless, I'm looking forward to working with Mojtaba again!",
     author: "Shahab Papoon",
     role: "Fractional Product Lead, Creator Genius",
+    imgSrc: "https://media.licdn.com/dms/image/v2/D4D03AQH5PLLeYYta_g/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1676264518568?e=1781136000&v=beta&t=yPH0pwsoguwkxIaVX9UAAuC_UYK2amEKCMWXrZS3aL4"
   },
   {
     quote:
       "Mojtaba is a great Product designer to collaborate with. We were working together on \"Yekzan\" product since 2017. He showed a high level of UI design, time management, User researcher, technical skills and was a valuable contributor to our product. I absolutely would recommend him as good team player.",
     author: "Mehran Asghari",
     role: "Founder, Yekzan",
+    imgSrc: "https://media.licdn.com/dms/image/v2/D4D03AQHuW-oM9YQNAg/profile-displayphoto-shrink_100_100/B4DZYDCcW0HIAU-/0/1743807698866?e=1781136000&v=beta&t=aUPceMVulNNTAplzKMY4v5nQ3Xc3rioC5-tpfq1AXpw"
   },
   {
     quote:
       "I've been working with Mojtaba for more than one year in our company. From the very beginning, Mojtaba showed his dedication and contributed to the working processes of our company with great interest and energy. His solid, consistent and open-minded approach to new information in conjunction with strong problem-solving skills immediately has made him a very important part of our team. I see Mojtaba as a result-driven, highly motivated and perspective specialist who is eager for complex industry challenges and new knowledge.",
     author: "amirhossein zarrinfard",
     role: "Founder, Hamyarsystem",
+    imgSrc: "https://media.licdn.com/dms/image/v2/D4D03AQHGKbCpQnzoOw/profile-displayphoto-shrink_100_100/B4DZRwH2sPHkAc-/0/1737047897381?e=1781136000&v=beta&t=y7of7k3BYGuYquziNTpVJV5Xy6NschqN_bqdNL90Svc"
   },
 ];
 
