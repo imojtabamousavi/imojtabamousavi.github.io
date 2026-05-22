@@ -72,26 +72,8 @@ html {
   * {
     @apply border-border;
   }
-  html {
-    background-color: hsl(var(--background));
-    color-scheme: light;
-  }
-  html.dark {
-    color-scheme: dark;
-  }
   body {
     @apply bg-background text-foreground;
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  html,
-  body,
-  #root,
-  #root * {
-    transition-property: background-color, border-color, color, fill, stroke, box-shadow;
-    transition-duration: 420ms;
-    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
   }
 }
 
@@ -133,6 +115,48 @@ html {
   @keyframes marqueeY-rev {
     0%   { transform: translateY(-50%); }
     100% { transform: translateY(0); }
+  }
+
+  /* Aurora / drifting color-blob background */
+  @keyframes blob-a {
+    0%   { transform: translate(-12%, -8%) scale(1); }
+    50%  { transform: translate(18%, 12%) scale(1.25); }
+    100% { transform: translate(-12%, -8%) scale(1); }
+  }
+  @keyframes blob-b {
+    0%   { transform: translate(20%, -10%) scale(1.1); }
+    50%  { transform: translate(-22%, 18%) scale(0.95); }
+    100% { transform: translate(20%, -10%) scale(1.1); }
+  }
+  @keyframes blob-c {
+    0%   { transform: translate(0%, 18%)  scale(1); }
+    50%  { transform: translate(-18%, -14%) scale(1.2); }
+    100% { transform: translate(0%, 18%)  scale(1); }
+  }
+  @keyframes blob-d {
+    0%   { transform: translate(8%, 10%)   scale(0.9); }
+    50%  { transform: translate(-14%, -16%) scale(1.15); }
+    100% { transform: translate(8%, 10%)   scale(0.9); }
+  }
+
+  /* Subtle hue rotation so the whole canvas slowly shifts */
+  @keyframes hue-drift {
+    0%   { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+  }
+
+  .aurora-canvas {
+    animation: hue-drift 60s linear infinite;
+  }
+  .aurora-blob {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(80px);
+    will-change: transform;
+    mix-blend-mode: screen;
+  }
+  .dark .aurora-blob {
+    mix-blend-mode: lighten;
   }
 
   .text-balance { text-wrap: balance; }
