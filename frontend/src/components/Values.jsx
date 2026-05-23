@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { values } from "../data/portfolio";
+import { values } from "@/data/portfolio";
 
 export default function Values() {
   return (
