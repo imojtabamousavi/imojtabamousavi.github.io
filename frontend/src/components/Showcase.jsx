@@ -32,13 +32,14 @@ const col4 = [
 ];
 
 function Column({ items, duration, reverse = false, testId }) {
-  // duplicate the array so the marquee loop is seamless
-  const loop = [...items, ...items];
+  // Keep one animation cycle taller than the visible column on tablet layouts.
+  const cycle = [...items, ...items];
+  const loop = [...cycle, ...cycle];
   return (
     <div
       data-testid={testId}
       className="relative overflow-hidden h-[140%] -my-[20%]"
-      style={{ maskImage: "linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%)", WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%)" }}
+      style={{ maskImage: "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, black 7%, black 93%, rgba(0,0,0,0.35) 100%)", WebkitMaskImage: "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, black 7%, black 93%, rgba(0,0,0,0.35) 100%)" }}
     >
       <div
         className="flex flex-col gap-5 transform-gpu will-change-transform hover:[animation-play-state:paused]"
@@ -121,13 +122,15 @@ export default function Showcase() {
       {/* Marquee mosaic */}
       <div
         data-testid="showcase-mosaic"
-        className="relative h-[78vh] md:h-[88vh] grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 px-3 md:px-5"
+        className="relative h-[78vh] md:h-[88vh] grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5 px-3 md:px-5"
       >
-        <Column items={col1} duration={42} reverse={false} testId="showcase-col-1" />
-        <Column items={col2} duration={56} reverse={true}  testId="showcase-col-2" />
-        <Column items={col3} duration={48} reverse={false} testId="showcase-col-3" />
-        <div className="hidden md:block">
-          <Column items={col4} duration={62} reverse={true} testId="showcase-col-4" />
+        <Column items={col1} duration={52} reverse={false} testId="showcase-col-1" />
+        <Column items={col2} duration={68} reverse={true}  testId="showcase-col-2" />
+        <div className="hidden lg:block">
+          <Column items={col3} duration={60} reverse={false} testId="showcase-col-3" />
+        </div>
+        <div className="hidden lg:block">
+          <Column items={col4} duration={76} reverse={true} testId="showcase-col-4" />
         </div>
       </div>
     </section>
