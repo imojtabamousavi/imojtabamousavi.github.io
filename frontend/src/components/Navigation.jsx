@@ -25,13 +25,13 @@ export default function Navigation() {
   return (
     <header
       data-testid="site-navigation"
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "backdrop-blur-xl bg-background/70 border-b border-border"
+      className={`fixed top-0 inset-x-0 z-50 isolate transition-shadow duration-300 ${
+        scrolled || open
+          ? "backdrop-blur-xl bg-background border-b border-border shadow-sm"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
+      <div className="relative z-20 max-w-[1400px] mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
         <a
           href="#intro"
           data-testid="nav-logo"
@@ -100,33 +100,39 @@ export default function Navigation() {
       </div>
 
       {open && (
-        <div
-          data-testid="mobile-menu-panel"
-          className="md:hidden border-t border-border bg-background/95 backdrop-blur-xl"
-        >
-          <nav className="px-6 py-4 flex flex-col gap-3">
-            {navigation.map((item) => (
+        <>
+          <div
+            className="fixed inset-x-0 top-16 bottom-0 z-0 bg-background/70 backdrop-blur-sm md:hidden"
+            aria-hidden="true"
+          />
+          <div
+            data-testid="mobile-menu-panel"
+            className="relative z-10 md:hidden border-t border-border bg-background shadow-lg"
+          >
+            <nav className="px-6 py-5 flex flex-col gap-3">
+              {navigation.map((item) => (
+                <a
+                  key={item.id}
+                  href={`#${item.id}`}
+                  data-testid={`mobile-nav-link-${item.id}`}
+                  onClick={() => setOpen(false)}
+                  className="text-base text-foreground/80 hover:text-foreground py-1"
+                >
+                  {item.label}
+                </a>
+              ))}
               <a
-                key={item.id}
-                href={`#${item.id}`}
-                data-testid={`mobile-nav-link-${item.id}`}
-                onClick={() => setOpen(false)}
-                className="text-base text-foreground/80 hover:text-foreground py-1"
+                href="/MojtabaMousavi-Productdesigner.pdf"
+                download="Mojtaba-Mousavi-Resume.pdf"
+                data-testid="mobile-download-resume"
+                className="mt-2 inline-flex items-center gap-2 text-sm font-medium"
               >
-                {item.label}
+                <ArrowDownToLine className="h-4 w-4" />
+                Download Resume
               </a>
-            ))}
-            <a
-              href="/MojtabaMousavi-Productdesigner.pdf"
-              download="Mojtaba-Mousavi-Resume.pdf"
-              data-testid="mobile-download-resume"
-              className="mt-2 inline-flex items-center gap-2 text-sm font-medium"
-            >
-              <ArrowDownToLine className="h-4 w-4" />
-              Download Resume
-            </a>
-          </nav>
-        </div>
+            </nav>
+          </div>
+        </>
       )}
     </header>
   );
