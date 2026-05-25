@@ -77,6 +77,7 @@ export default function Testimonials() {
   const [hasStartedMarquee, setHasStartedMarquee] = useState(false);
   const [dragLimit, setDragLimit] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     if (isNearSection) {
@@ -108,7 +109,7 @@ export default function Testimonials() {
   }, []);
 
   useAnimationFrame((_, delta) => {
-    if (!hasStartedMarquee || isDragging || dragLimit <= 0) {
+    if (!hasStartedMarquee || isDragging || isHovered || dragLimit <= 0) {
       return;
     }
 
@@ -135,7 +136,7 @@ export default function Testimonials() {
           className="relative py-24 md:py-36 border-t border-border overflow-hidden"
       >
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <div className="mb-16 grid grid-cols-1 lg:grid-cols-12 gap-10">
+          <div className="mb-16 grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5">
               <p className="label-mono text-muted-foreground mb-4">
                 03 — References
@@ -148,9 +149,9 @@ export default function Testimonials() {
                 .
               </h2>
             </div>
-            <div className="lg:col-span-7 lg:pl-8 flex items-end justify-between gap-6">
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl">
-                A handful of the people I've worked with closely — engineers,
+            <div className="lg:col-span-7 flex items-end justify-between">
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl ml-0 lg:ml-auto">
+                A handful of the people I've worked with closely, engineers,
                 founders, fellow designers. Available on request for the rest.
               </p>
             </div>
@@ -161,6 +162,8 @@ export default function Testimonials() {
         <div
             data-testid="testimonials-marquee"
             className="relative cursor-grab overflow-hidden active:cursor-grabbing"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
             style={{
               maskImage:
                   "linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)",
