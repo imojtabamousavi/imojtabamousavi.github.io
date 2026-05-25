@@ -1,9 +1,10 @@
-import { motion } from "framer-motion";
+import { motion, useAnimationFrame, useInView, useMotionValue } from "framer-motion";
 import { Quote } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { testimonials } from "@/data/portfolio";
 
 const MAX_QUOTE_LENGTH = 300;
+const MARQUEE_DURATION = 65;
 
 function formatQuote(quote) {
   if (quote.length <= MAX_QUOTE_LENGTH) {
@@ -64,9 +65,71 @@ function AuthorAvatar({ author, imgSrc }) {
 export default function Testimonials() {
   // duplicate the items so the X marquee loops seamlessly
   const loop = [...testimonials, ...testimonials];
+  const sectionRef = useRef(null);
+  const trackRef = useRef(null);
+  const firstCardRef = useRef(null);
+  const loopStartRef = useRef(null);
+  const isNearSection = useInView(sectionRef, {
+    margin: "360px 0px 360px 0px",
+    amount: 0.01,
+  });
+  const x = useMotionValue(0);
+  const [hasStartedMarquee, setHasStartedMarquee] = useState(false);
+  const [dragLimit, setDragLimit] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+
+  useEffect(() => {
+    if (isNearSection) {
+      setHasStartedMarquee(true);
+    }
+  }, [isNearSection]);
+
+  useLayoutEffect(() => {
+    const track = trackRef.current;
+
+    if (!track) {
+      return undefined;
+    }
+
+    const updateDragLimit = () => {
+      if (!firstCardRef.current || !loopStartRef.current) {
+        return;
+      }
+
+      setDragLimit(loopStartRef.current.offsetLeft - firstCardRef.current.offsetLeft);
+    };
+
+    updateDragLimit();
+
+    const resizeObserver = new ResizeObserver(updateDragLimit);
+    resizeObserver.observe(track);
+
+    return () => resizeObserver.disconnect();
+  }, []);
+
+  useAnimationFrame((_, delta) => {
+    if (!hasStartedMarquee || isDragging || dragLimit <= 0) {
+      return;
+    }
+
+    const pixelsPerMillisecond = dragLimit / (MARQUEE_DURATION * 1000);
+    const pixelRatio = window.devicePixelRatio || 1;
+    let nextX = x.get() - delta * pixelsPerMillisecond;
+
+    while (nextX <= -dragLimit) {
+      nextX += dragLimit;
+    }
+
+    while (nextX > 0) {
+      nextX -= dragLimit;
+    }
+
+    x.set(Math.round(nextX * pixelRatio) / pixelRatio);
+  });
 
   return (
       <section
+          ref={sectionRef}
           id="references"
           data-testid="testimonials-section"
           className="relative py-24 md:py-36 border-t border-border overflow-hidden"
@@ -97,7 +160,7 @@ export default function Testimonials() {
         {/* Horizontal smooth-scrolling marquee, edge-to-edge */}
         <div
             data-testid="testimonials-marquee"
-            className="marquee-pause relative"
+            className="relative cursor-grab overflow-hidden active:cursor-grabbing"
             style={{
               maskImage:
                   "linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)",
@@ -105,19 +168,34 @@ export default function Testimonials() {
                   "linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)",
             }}
         >
-          <div className="flex gap-6 md:gap-8 marquee-slow whitespace-nowrap will-change-transform px-6 md:px-10">
+          <motion.div
+              ref={trackRef}
+              className="flex gap-6 md:gap-8 whitespace-nowrap transform-gpu will-change-transform px-6 md:px-10"
+              style={{ x }}
+              drag="x"
+              dragConstraints={{ left: -dragLimit, right: 0 }}
+              dragDirectionLock
+              dragElastic={0.08}
+              dragMomentum={false}
+              onDragStart={() => setIsDragging(true)}
+              onDragEnd={() => setIsDragging(false)}
+              whileTap={{ cursor: "grabbing" }}
+          >
             {loop.map((t, i) => (
-                <motion.figure
+                <figure
                     key={i}
-                    initial={{ opacity: 0, y: 16 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-40px" }}
-                    transition={{ duration: 0.6 }}
+                    ref={
+                      i === 0
+                          ? firstCardRef
+                          : i === testimonials.length
+                              ? loopStartRef
+                              : undefined
+                    }
                     data-testid={`testimonial-${i}`}
                     className="relative shrink-0 w-[90vw] sm:w-[68vw] md:w-[52vw] lg:w-[44vw] xl:w-[38vw]
                          aspect-[16/10]
                          whitespace-normal p-8 md:p-10 rounded-2xl border border-border
-                         bg-card/80 backdrop-blur-sm hover:bg-accent/40 transition-colors
+                         bg-card/80 hover:bg-accent/40 transition-colors
                          flex flex-col justify-between"
                 >
                   <div>
@@ -133,9 +211,9 @@ export default function Testimonials() {
                       <div className="text-muted-foreground">{t.role}</div>
                     </div>
                   </figcaption>
-                </motion.figure>
+                </figure>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
   );
