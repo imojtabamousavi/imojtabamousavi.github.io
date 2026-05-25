@@ -98,7 +98,7 @@ export default function Contact() {
                   <Linkedin className="h-3 w-3" /> Social
                 </div>
                 <a
-                  href="https://www.linkedin.com/"
+                  href={profile.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   data-testid="contact-linkedin"

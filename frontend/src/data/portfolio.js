@@ -5,6 +5,7 @@ export const profile = {
   location: "Yerevan, Armenia",
   email: "Mojtaba.mousavi.k@gmail.com",
   behance: "https://www.behance.net/mojtabamousavi",
+  linkedin: "https://www.linkedin.com/in/mojtaba-mousavi-259061115/",
   experience: "7+ years",
   headline:
     "Hello there, I'm a designer who cares about making beautiful things that help people.",
