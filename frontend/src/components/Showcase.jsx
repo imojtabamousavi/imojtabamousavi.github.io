@@ -77,7 +77,7 @@ export default function Showcase() {
       data-testid="showcase-section"
       className="relative py-24 md:py-32 border-t border-border overflow-hidden"
     >
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10 mb-16 md:mb-20">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-10 pb-4 mb-16 md:mb-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
