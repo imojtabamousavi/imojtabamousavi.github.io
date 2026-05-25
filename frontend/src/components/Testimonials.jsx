@@ -90,9 +90,6 @@ export default function Testimonials() {
                 A handful of the people I've worked with closely — engineers,
                 founders, fellow designers. Available on request for the rest.
               </p>
-              <p className="hidden md:block label-mono text-muted-foreground whitespace-nowrap">
-                Hover to pause →
-              </p>
             </div>
           </div>
         </div>

@@ -96,7 +96,7 @@ export default function Hero() {
           <span className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
             {/*Focused on current work · 2026*/}
-            Designing in Figma / Building in Webflow
+            Designing in Figma
           </span>
             <span className="hidden sm:flex items-center gap-1.5">
             <MapPin className="h-3 w-3" />
