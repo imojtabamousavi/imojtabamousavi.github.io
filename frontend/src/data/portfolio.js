@@ -163,7 +163,7 @@ export const skills = [
 
 export const navigation = [
   { id: "intro", label: "Intro" },
-  { id: "showcase", label: "Showcase" },
+  { id: "case-studies", label: "Projects" },
   { id: "work", label: "Work" },
   { id: "values", label: "Values" },
   { id: "references", label: "References" },

@@ -4,7 +4,7 @@ import { Sun, Moon, ArrowDownToLine, Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { navigation, profile } from "@/data/portfolio";
 
-export default function Navigation() {
+export default function Navigation({ detailPage = false }) {
   const { theme, setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -33,7 +33,7 @@ export default function Navigation() {
     >
       <div className="relative z-20 max-w-[1400px] mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
         <a
-          href="#intro"
+          href={detailPage ? "/#intro" : "#intro"}
           data-testid="nav-logo"
           className="font-heading font-bold tracking-tight text-base flex items-center gap-2"
         >
@@ -48,7 +48,7 @@ export default function Navigation() {
           {navigation.map((item) => (
             <a
               key={item.id}
-              href={`#${item.id}`}
+              href={detailPage ? `/#${item.id}` : `#${item.id}`}
               data-testid={`nav-link-${item.id}`}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors link-underline"
             >
@@ -113,7 +113,7 @@ export default function Navigation() {
               {navigation.map((item) => (
                 <a
                   key={item.id}
-                  href={`#${item.id}`}
+                  href={detailPage ? `/#${item.id}` : `#${item.id}`}
                   data-testid={`mobile-nav-link-${item.id}`}
                   onClick={() => setOpen(false)}
                   className="text-base text-foreground/80 hover:text-foreground py-1"

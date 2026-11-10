@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, ArrowDown, MapPin } from "lucide-react";
+import { ArrowDown, MapPin } from "lucide-react";
 import { profile, skills } from "@/data/portfolio";
 
 /**
@@ -115,7 +115,7 @@ export default function Hero() {
               transition={{ duration: 1.1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               data-testid="hero-headline"
               className="font-heading font-medium tracking-[-0.045em] leading-[0.92] text-balance
-                     text-[3.2rem] sm:text-[5rem] md:text-[6.4rem] lg:text-[7.2rem] xl:text-[7.8rem]"
+                     text-[2.56rem] sm:text-[4rem] md:text-[5.12rem] lg:text-[5.76rem] xl:text-[6.24rem]"
           >
             Hello there, I'm a{" "}
             <span className="font-serif-display italic font-normal opacity-80">
@@ -144,13 +144,12 @@ export default function Hero() {
 
             <div className="lg:col-span-5 flex flex-wrap items-center gap-3 lg:justify-end">
               <a
-                  href={profile.behance}
-                  target="_blank"
+                  href="#case-studies"
                   data-testid="hero-cta-work"
                   className="group inline-flex items-center gap-2 rounded-full bg-foreground text-background px-6 py-3 text-sm font-medium hover:opacity-90 transition-opacity"
               >
-                View case studies
-                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                Projects
+                <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
               </a>
               <a
                   href="#contact"
@@ -170,7 +169,7 @@ export default function Hero() {
               className="mt-20 md:mt-28 flex flex-col gap-6"
           >
             <a
-                href="#showcase"
+                href="#case-studies"
                 data-testid="hero-scroll-cue"
                 className="inline-flex items-center gap-2 label-mono text-foreground/70 hover:text-foreground transition-colors group w-fit"
             >
