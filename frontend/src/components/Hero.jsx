@@ -12,7 +12,7 @@ export default function Hero() {
       <section
           id="intro"
           data-testid="hero-section"
-          className="relative min-h-screen overflow-hidden flex items-center"
+          className="relative min-h-[102svh] overflow-hidden flex flex-col"
       >
         {/* Animated aurora background */}
         <div
@@ -85,7 +85,7 @@ export default function Hero() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-10 py-32 md:py-40">
+        <div className="relative z-10 flex-1 w-full max-w-[1400px] mx-auto px-6 md:px-10 pt-24 md:pt-28 pb-14 md:pb-16 flex flex-col justify-center">
           {/* Top meta */}
           <motion.div
               initial={{ opacity: 0, y: 12 }}
@@ -133,22 +133,22 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.4 }}
-              className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end"
+              className="mt-10 md:mt-14"
           >
             <p
                 data-testid="hero-subhead"
-                className="lg:col-span-7 max-w-2xl text-base sm:text-lg text-foreground/80 leading-relaxed"
+                className="max-w-2xl text-base sm:text-lg text-foreground/80 leading-relaxed"
             >
               {profile.summary}
             </p>
 
-            <div className="lg:col-span-5 flex flex-wrap items-center gap-3 lg:justify-end">
+            <div className="mt-7 flex flex-wrap items-center gap-3">
               <a
                   href="#case-studies"
                   data-testid="hero-cta-work"
                   className="group inline-flex items-center gap-2 rounded-full bg-foreground text-background px-6 py-3 text-sm font-medium hover:opacity-90 transition-opacity"
               >
-                Projects
+                Selected projects
                 <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
               </a>
               <a
@@ -161,23 +161,13 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Bottom row: scroll cue + skills marquee */}
-          <motion.div
+        </div>
+        <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.9 }}
-              className="mt-20 md:mt-28 flex flex-col gap-6"
+              className="relative z-10 w-full"
           >
-            <a
-                href="#case-studies"
-                data-testid="hero-scroll-cue"
-                className="inline-flex items-center gap-2 label-mono text-foreground/70 hover:text-foreground transition-colors group w-fit"
-            >
-              <span className="h-px w-12 bg-current group-hover:w-20 transition-all duration-500" />
-              Scroll for work
-              <ArrowDown className="h-3.5 w-3.5 group-hover:translate-y-0.5 transition-transform" />
-            </a>
-
             <div
                 data-testid="skills-marquee"
                 className="border-y border-foreground/15 py-4 overflow-hidden relative backdrop-blur-[2px]"
@@ -194,8 +184,7 @@ export default function Hero() {
                 ))}
               </div>
             </div>
-          </motion.div>
-        </div>
+        </motion.div>
       </section>
   );
 }
