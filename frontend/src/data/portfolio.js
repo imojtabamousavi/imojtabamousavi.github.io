@@ -46,66 +46,97 @@ export const values = [
 export const work = [
   {
     icon: "WF",
+    logo: "/Company%20logos/Whitefox.png",
     company: "WhiteFox",
     role: "Senior Product Designer",
     dates: "Oct 2024 — Present",
     location: "Australia · Remote",
-    description:
-      "Cloud-based digital agency in Australia specializing in SaaS and AI products. I own end-to-end design across multiple SaaS engagements — flows, competitor analysis, hi-fi designs — partner directly with the CEO and CTO on AI-driven solutions, and mentor junior designers. Cut development rework by 20% by introducing a UX audit process that reduced post-release issues from 15 to 3.",
+    highlights: [
+      "Collaborated with multiple clients to understand business objectives and translate them into user-centric design solutions aligned with technical constraints.",
+      "Led the end-to-end design of a freight logistics platform, simplifying enquiry and quotation workflows through clear user journeys and intuitive UI.",
+      "Turned Miro-based vehicle allocation plans into an interactive dashboard with hands-free presentation mode for TVs and laptops.",
+      "Translated complex cybersecurity functionality into interfaces for security testing, threat analysis, and remediation.",
+      "Refined user flows and UI for a B2B battery trading platform, standardizing interactions and aligning designs with product requirements and technical constraints.",
+      "Used analytics to redesign Whitefox’s website navigation, page structure, and content hierarchy across the homepage, landing pages, and blog.",
+    ],
   },
   {
     icon: "NL",
+    logo: "/Company%20logos/NitoLabs.png",
     company: "Nito Labs",
     role: "Senior Product Designer",
     dates: "Aug 2023 — Sep 2024",
     location: "Turkey . Remote",
-    description:
-      "Web3-native fintech building crypto products. Owned the design of a native iOS crypto wallet with swap, invest and collateral features from scratch, and built a scalable design system on Apple's HIG that boosted development speed by 40%. Led UX improvements with a cross-functional team.",
+    highlights: [
+      "Led the design of a native iOS cryptocurrency wallet from initial concepts through detailed interfaces, covering asset swaps, investment, and collateral management.",
+      "Built a scalable design system with reusable components using Apple's Human Interface Guidelines, resulting in a 40% increase in development speed.",
+      "Collaborated with a cross-functional team to define new features and improve existing user flows.",
+    ],
   },
   {
     icon: "LQ",
+    logo: "/Company%20logos/Lequest.png",
     company: "LeQuest",
     role: "Product Designer",
     dates: "Feb 2023 — Jul 2023",
     location: "Netherlands . On-site",
-    description:
-      "B2B e-learning platform for medical-device simulation training. Maintained, expanded and documented a Material UI–based design system with 360+ components. Owned end-to-end design — research, interviews, wireframes, prototypes — and lifted product consistency by 50% by scaling the responsive web design system.",
+    highlights: [
+      "Worked with product managers and product owners to translate user problems into design requirements and feature opportunities.",
+      "Maintained, expanded, and updated the design system, collaborating to document over 360 design components using the Material UI component library.",
+      "Reviewed implemented features, identified usability and interface issues, and verified fixes against the intended designs.",
+    ],
   },
   {
     icon: "LS",
+    logo: "/Company%20logos/Lumenswap.png",
     company: "Lumenswap",
     role: "Product Designer",
     dates: "Oct 2021 — Feb 2023",
     location: "Turkey . Remote",
-    description:
-      "B2C decentralized trading platform with 38K+ users. Built a design system from scratch (100+ components) and shipped the swap & trade experience that processes 5,200+ transactions per day. Designed the pool-liquidity feature that reached $20.64M TVL in its first 4 months. Implemented analytics-driven iterations that lifted user satisfaction by 34%.",
+    highlights: [
+      "Owned the design process for core product workflows, delivering wireframes, prototypes, detailed interfaces, and a reusable design system with more than 100 components.",
+      "Designed the swap and trading experience for a product that processed more than 5,200 transactions per day.",
+      "Designed a liquidity-pool feature that reached $20.64 million in total value locked within its first four months.",
+    ],
   },
   {
     icon: "HS",
+    logo: "/Company%20logos/Hamyar%20system.png",
     company: "Hamyar System",
     role: "Senior Product Designer",
     dates: "Feb 2020 — Sep 2021",
     location: "Tehran . Hybrid",
-    description:
-      "Web-based digital agency in the health industry with 42+ customers. Worked with 15+ clients to translate requirements into responsive, friendly interfaces. Built a comprehensive B2B SaaS design system (CMS for health clinics) that scaled the product from an MVP with 2 customers to 40+. Grew the product design team from 1 to 3 and ran up to 8 simultaneous projects across time zones.",
+    highlights: [
+      "Collaborated with more than 15 clients to translate their requirements into responsive web experiences.",
+      "Developed a design system for a B2B healthcare content-management platform, supporting its expansion beyond the initial MVP.",
+      "Owned the design process across client projects, from user research and interviews through wireframing, prototyping, and detailed interface design.",
+    ],
   },
   {
     icon: "YK",
+    logo: "/Company%20logos/Yekzan.png",
     company: "Yekzan",
     role: "Product Designer",
     dates: "Dec 2018 — Jan 2020",
     location: "Tehran . Remote",
-    description:
-      "Iran's top women's-health app — 800,000+ installs and 25K+ daily active users. Redesigned the Android app, driving 720K+ new installs and an 80% lift in engagement over 2 years. Designed an internal PWS for doctors that improved their response time by 60%. Owned research, personas, journeys and feature definition.",
+    highlights: [
+      "Redesigned the Android native application and led to +720,000 new installations and 80% increase in user engagement in 2 years.",
+      "Designed an internal web application(PWS) for doctors that increased their response time by 60%.",
+      "Conducted user research to inform personas, user journeys, and service blueprints. Collaborated with engineers and product owners to translate findings into product structure and feature requirements.",
+    ],
   },
   {
     icon: "PN",
+    logo: "/Company%20logos/Ponisha.png",
     company: "Ponisha",
     role: "Product Designer",
     dates: "Feb 2018 — Oct 2018",
     location: "Rasht . On-site",
-    description:
-      "Iran's leading freelancing platform with 390K+ active users. Owned end-to-end journey and design for iOS, Android and the main website. Simplified the employer–freelancer connection with an iOS chat experience that lifted response speed by 30%, and redesigned the dashboard for a 50% reduction in average task-completion time.",
+    highlights: [
+      "Owned end-to-end user journey and design process of iOS and Android native apps, as well as main website.",
+      "Simplified the connection between employers and freelancers with the iOS chat app, resulting in a 30% increase in their response speed time.",
+      "Implemented a user-centric approach to redesigning the freelancer and client dashboard, resulting in a 50% reduction in average task completion time.",
+    ],
   },
 ];
 

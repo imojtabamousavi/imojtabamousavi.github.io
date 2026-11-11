@@ -41,8 +41,8 @@ export default function Work() {
               className="group grid grid-cols-12 gap-4 md:gap-6 py-10 md:py-14 border-b border-border hover:bg-accent/40 transition-colors px-2 md:px-4 -mx-2 md:-mx-4 rounded-md"
             >
               <div className="col-span-12 md:col-span-3 flex items-start gap-3">
-                <div className="h-10 w-10 rounded-full grid place-items-center border border-border bg-background font-heading font-bold text-xs">
-                  {job.icon}
+                <div className="h-10 w-10 shrink-0 rounded-full grid place-items-center border border-border bg-background overflow-hidden">
+                  <img src={job.logo} alt={`${job.company} logo`} className="h-full w-full object-contain" loading="lazy" />
                 </div>
                 <div>
                   <div className="label-mono text-muted-foreground">
@@ -62,9 +62,17 @@ export default function Work() {
                   {job.role}
                   <ArrowUpRight className="h-6 w-6 md:h-8 md:w-8 opacity-0 -translate-x-2 group-hover:opacity-60 group-hover:translate-x-0 transition-all duration-500" />
                 </h3>
-                <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl">
-                  {job.description}
-                </p>
+                {job.highlights ? (
+                  <ul className="list-disc pl-5 space-y-2 text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl">
+                    {job.highlights.map((highlight) => (
+                      <li key={highlight}>{highlight}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl">
+                    {job.description}
+                  </p>
+                )}
               </div>
             </motion.article>
           ))}
