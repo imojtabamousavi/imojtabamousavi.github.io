@@ -2,6 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import { caseStudies } from "@/data/caseStudies";
 
 function CaseStudyThumbnail({ study }) {
+  if (!study.thumbnail) return <div className="aspect-[16/10] flex flex-col items-center justify-center gap-3 text-white" style={{ backgroundColor: study.thumbnailBackground }}><span className="font-heading text-3xl md:text-4xl font-semibold">{study.title}</span><span className="text-sm text-white/60">{study.intro}</span></div>;
   if (study.thumbnailStyle === "artwork") return <div className="aspect-[16/10] overflow-hidden" style={{ backgroundColor: study.thumbnailBackground }}><img src={study.thumbnail} alt={study.thumbnailAlt} loading="lazy" className="block w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.025]" /></div>;
   return <div className="relative aspect-[16/10] overflow-hidden" style={{ backgroundColor: study.thumbnailBackground }}>
     <div className="absolute left-[9%] right-[9%] top-[18%] rounded-t-[clamp(12px,2vw,28px)] bg-white border-[3px] md:border-[5px] border-white shadow-2xl overflow-hidden transition-transform duration-500 group-hover:translate-y-[-4px]">

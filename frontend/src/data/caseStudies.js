@@ -1,4 +1,6 @@
 import { yekzan } from "./yekzan";
+import { emonshi } from "./emonshi";
+import { myCoworkCafe } from "./myCoworkCafe";
 
 const image = (name) => `/case-studies/lumenswap/${name}.png`;
 
@@ -29,4 +31,4 @@ export const caseStudies = [{
     { type: "product", title: "Auction", kicker: "05 · Raise capital", intro: "The auction experience lets curated Stellar projects raise capital from their communities in a transparent way.", images: [{ src: image("auction"), alt: "Lumenswap auction interface", caption: "Auction board" }] },
     { type: "closing", title: "Creating and testing", body: "The case study closes with more than 100 screens created and tested across the product.", image: image("final-screens"), imageAlt: "Angled gallery of Lumenswap product screens and design explorations" },
   ],
-}, yekzan];
+}, yekzan, emonshi, myCoworkCafe];
