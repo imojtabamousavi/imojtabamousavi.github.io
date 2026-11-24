@@ -118,11 +118,11 @@ export default function Hero() {
                      text-[2.56rem] sm:text-[4rem] md:text-[5.12rem] lg:text-[5.76rem] xl:text-[6.24rem]"
           >
             Hello there, I'm a{" "}
-            <span className="font-serif-display italic font-normal opacity-80">
+            <span className="font-serif-display italic font-normal text-foreground/80">
             designer
           </span>{" "}
             crafting solutions that make the simple feel{" "}
-            <span className="font-serif-display italic font-normal opacity-80">
+            <span className="font-serif-display italic font-normal text-foreground/80">
             beautiful
           </span>{" "}
             .
