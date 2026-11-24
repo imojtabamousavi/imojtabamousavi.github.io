@@ -42,7 +42,10 @@ export default function Work() {
             >
               <div className="col-span-12 md:col-span-3 flex items-start gap-3">
                 <div className="h-10 w-10 shrink-0 rounded-full grid place-items-center border border-border bg-background overflow-hidden">
-                  <img src={job.logo} alt={`${job.company} logo`} className="h-full w-full object-contain" loading="lazy" />
+                  <img src={job.logo} alt={`${job.company} logo`} className={`h-full w-full object-contain ${job.logoDark ? "dark:hidden" : ""}`} loading="lazy" />
+                  {job.logoDark && (
+                    <img src={job.logoDark} alt={`${job.company} logo`} className="hidden h-full w-full object-contain dark:block" loading="lazy" />
+                  )}
                 </div>
                 <div>
                   <div className="label-mono text-muted-foreground">

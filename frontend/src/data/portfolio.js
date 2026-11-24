@@ -63,6 +63,7 @@ export const work = [
   {
     icon: "NL",
     logo: "/Company%20logos/NitoLabs.png",
+    logoDark: "/Company%20logos/Nito%20logo%20dark.png",
     company: "Nito Labs",
     role: "Senior Product Designer",
     dates: "Aug 2023 — Sep 2024",
