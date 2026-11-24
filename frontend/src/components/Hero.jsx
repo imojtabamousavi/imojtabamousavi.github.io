@@ -4,7 +4,7 @@ import { profile, skills } from "@/data/portfolio";
 
 /**
  * Hero — animated aurora canvas with editorial typography on top.
- * 4 drifting color blobs, slow hue rotation, subtle noise grain.
+ * 4 drifting color blobs and slow hue rotation.
  * No images; the color *is* the visual.
  */
 export default function Hero() {
@@ -74,14 +74,6 @@ export default function Hero() {
           />
           {/* Soft vignette so center text stays readable */}
           <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/40" />
-          {/* Noise grain */}
-          <div
-              className="absolute inset-0 opacity-[0.08] mix-blend-overlay"
-              style={{
-                backgroundImage:
-                    "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
-              }}
-          />
         </div>
 
         {/* Content */}

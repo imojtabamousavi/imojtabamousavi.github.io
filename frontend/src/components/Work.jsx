@@ -38,7 +38,7 @@ export default function Work() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.7, delay: i * 0.05 }}
               data-testid={`work-item-${job.company.toLowerCase().replace(/\s+/g, "-")}`}
-              className="group grid grid-cols-12 gap-4 md:gap-6 py-10 md:py-14 border-b border-border hover:bg-accent/40 transition-colors px-2 md:px-4 -mx-2 md:-mx-4 rounded-md"
+              className="group grid grid-cols-12 gap-4 md:gap-6 py-10 md:py-14 border-b last:border-b-0 border-border hover:bg-accent/40 transition-colors px-2 md:px-4 -mx-2 md:-mx-4 rounded-md"
             >
               <div className="col-span-12 md:col-span-3 flex items-start gap-3">
                 <div className="h-10 w-10 shrink-0 rounded-full grid place-items-center border border-border bg-background overflow-hidden">
